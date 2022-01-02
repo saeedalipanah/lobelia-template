@@ -1,0 +1,86 @@
+<template>
+  <div class="contanier blue lighten-2">
+    <div class="title">
+      <h1>TOKEN SALE</h1>
+      <p>
+        The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="content">
+      <v-container>
+        <v-row>
+          <v-col class="red">
+            <div class="items d-flex ">
+              <ul>
+                <li class="white">
+                  <h3>Start</h3>
+                  <p>Feb 8, 2018 (9:00AM GMT)</p>
+                </li>
+                <li>
+                  <h3>End</h3>
+                  <p>Feb 20, 2018 (11:00AM GMT)</p>
+                </li>
+                <li>
+                  <h3>Acceptable currencies</h3>
+                  <p>ETH, BTC, LTC</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h3>Number of tokens for sale</h3>
+                  <p>900,000 ICC (9%)</p>
+                </li>
+                <li>
+                  <h3>Tokens exchange rate</h3>
+                  <p>1 ETH = 650 ICC, 1 BTC = 1940 ICC</p>
+                </li>
+                <li>
+                  <h3>Minimal transaction amount</h3>
+                  <p>1 ETH/ 1 BTC/ 1 LTC</p>
+                </li>
+              </ul>
+            </div>
+          </v-col>
+          <v-col class="blue d-flex flex-column align-center">
+            <v-card>
+              <h1>timer</h1>
+              <v-btn rounded color="red">join & buy token</v-btn>
+              <div class="icons d-flex justify-center">
+                <i class="fab fa-bitcoin"></i>
+                <i class="fas fa-won-sign"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.contanier {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .content {
+    .actions{
+      width: 80%;
+      background: red;
+    }
+    
+  }
+}
+</style>
