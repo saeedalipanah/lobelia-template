@@ -23,6 +23,7 @@
         <section-twelve></section-twelve>
         <section-thirteen></section-thirteen>
         <section-fourteen></section-fourteen>
+        <section-fifteen></section-fifteen>
       </v-main>
 
       <footer></footer>
@@ -47,6 +48,7 @@ import SectionEleven from "@/components/Sections/SectionEleven.vue";
 import SectionTwelve from "@/components/Sections/SectionTwelve.vue";
 import SectionThirteen from './components/Sections/SectionThirteen.vue';
 import SectionFourteen from './components/Sections/SectionFourteen.vue';
+import SectionFifteen from './components/Sections/SectionFifteen.vue';
 export default {
   name: "App",
 
@@ -77,7 +79,8 @@ export default {
     SectionEleven,
     SectionTwelve,
     SectionThirteen,
-    SectionFourteen
+    SectionFourteen,
+    SectionFifteen,
   },
 };
 </script>

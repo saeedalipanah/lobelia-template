@@ -9,7 +9,7 @@
         <v-row justify="center">
           <v-col cols="12" sm="4" v-for="(item,i) in items" :key="i">
             <div class=" red d-flex justify-center align-center">
-              <span class="fas fa-phone"></span>
+              <span :class="`${item.icon}`"></span>
               <h4 class="mx-4">{{item.text}}</h4>
             </div>
           </v-col>
@@ -48,15 +48,15 @@ export default {
     return {
       items: [
         {
-          icon: "",
+          icon: "fas fa-phone",
           text: "+44 0123 4567",
         },
         {
-          icon: "",
+          icon: "fas fa-envelope",
           text: "info@company.com",
         },
         {
-          icon: "",
+          icon: "fab fa-telegram-plane",
           text: "Join us on Telegram",
         },
       ],
