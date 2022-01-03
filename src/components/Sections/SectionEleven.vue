@@ -12,7 +12,7 @@
     <v-container fluid>
       <v-row >
         <v-col class="grey d-flex justify-center" cols="12" sm="6" md="3" v-for="(user,i) in users" :key="i">
-          <v-card class="d-flex flex-column align-center " max-width="344" >
+          <v-card class="cards d-flex flex-column align-center " :class="`card-${i}`" max-width="344" >
             <v-avatar size="150">
             <v-img contain
               :src="user.avatarImage"
@@ -41,7 +41,7 @@
     <v-container fluid>
       <v-row justify="center">
         <v-col class="grey d-flex justify-center" cols="12" sm="6" md="3" v-for="(advisor,i) in advisors" :key="i">
-          <v-card class="d-flex flex-column align-center " max-width="344" >
+          <v-card class="cards d-flex flex-column align-center " max-width="344" :class="`card-${i}`">
             <v-avatar size="150">
             <v-img contain
               :src="advisor.avatarImage"
@@ -116,10 +116,29 @@ export default {
           stack: "CEO & Lead Blockchain",
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incide.",
         },
-        
-      ]
+      ],
+      observer: null
     };
   },
+  mounted(){
+    this.slideInAnimation()
+  },
+  methods:{
+    slideInAnimation(){
+      const cards = document.getElementsByClassName('cards');
+      this.observer = new IntersectionObserver((enteries)=>{
+        enteries.forEach(entery => {
+          if(entery.isIntersecting){
+            entery.target.classList.add('show')
+          }
+        })
+      });
+      for (let i = 0; i < cards.length; i++) {
+        this.observer.observe(cards[i])
+      }
+    },
+
+  }
   
 };
 </script>
@@ -132,8 +151,25 @@ export default {
     align-items: center;
     text-align: center;
   }
-  .content {
-   
+  .cards{
+    transform: translateY(80px);
+    opacity: 0;
+    &.show{
+      transition: all 1s ease;
+      transform: translateY(0);
+      opacity: 1;
+    }
+    &.card-1 {
+      transition-delay: .1s;
+    }
+    &.card-2 {
+      transition-delay: .2s;
+    }
+    &.card-3 {
+      transition-delay: .3s;
+    }
+    
   }
+  
 }
 </style>
