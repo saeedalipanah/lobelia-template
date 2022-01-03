@@ -34,20 +34,7 @@
 export default {
   data() {
     return {
-      items: [
-        {
-          icon: "",
-          text: "+44 0123 4567",
-        },
-        {
-          icon: "",
-          text: "info@company.com",
-        },
-        {
-          icon: "",
-          text: "Join us on Telegram",
-        },
-      ],
+      
     };
   },
 };
