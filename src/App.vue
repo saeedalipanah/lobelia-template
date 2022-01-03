@@ -91,6 +91,8 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 .app{
+      background-image: linear-gradient(
+135deg, #0a1992 0%, #000537 100%) !important;
   .loading{
     height: 100vh;
     width: 100%;

@@ -22,7 +22,6 @@ export default {};
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: gray;
   // justify-content: center;
   .blockchain-img {
     width: 770px;

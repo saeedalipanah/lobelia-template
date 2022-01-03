@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <v-app-bar app elevate-on-scroll height="90" class="app-bar">
+    <v-app-bar app elevate-on-scroll height="90" class="app-bar" color="#0a1992">
       <v-toolbar-title class="text-uppercase">
         <img src="@/assets/logo/logo-white2x.png" alt="" class="logo-image" />
       </v-toolbar-title>
@@ -100,7 +100,6 @@ export default {
 
 <style lang="scss" scoped>
 .app-bar {
-  background-color: #06116f !important;
   padding: 0 120px;
   @media only screen and(max-width:1270px) {
     padding: 0 30px;
@@ -144,22 +143,24 @@ export default {
       &.more-button {
         &:hover {
           .menu-items {
-            height: auto;
+            height: 100px;
             opacity: 1;
-            overflow: auto;
+            transform: none;
           }
         }
       }
       .menu-items {
+        transition:all .3s ease;
         position: absolute;
-        top: 50px;
+        top: 60px;
         left: 0;
-        background: red;
+        background:#06116f;
         border-radius: 4px;
         width: 230px;
-        height: 0;
+        opacity: 0;
+        height: 90px;
         overflow: hidden;
-        // opacity: 0;
+        transform: translateY(-20px);
         ul {
           list-style: none;
           li {
