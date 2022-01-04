@@ -1,5 +1,5 @@
 <template>
-  <div class="contanier blue lighten-2">
+  <div class="page-container">
     <v-container>
       <v-row>
         <v-col md="6" class="grey">
@@ -24,13 +24,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contanier {
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.page-container {
+ 
   .content {
     .actions {
       width: 80%;

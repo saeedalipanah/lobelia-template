@@ -21,6 +21,7 @@
         <section-ten></section-ten>
         <section-eleven></section-eleven>
         <section-twelve></section-twelve>
+        <section-twelve-sub-logo></section-twelve-sub-logo>
         <section-thirteen></section-thirteen>
         <section-fourteen></section-fourteen>
         <section-fifteen></section-fifteen>
@@ -46,6 +47,7 @@ import SectionNine from "@/components/Sections/SectionNine.vue";
 import SectionTen from "@/components/Sections/SectionTen.vue";
 import SectionEleven from "@/components/Sections/SectionEleven.vue";
 import SectionTwelve from "@/components/Sections/SectionTwelve.vue";
+import SectionTwelveSubLogo from './components/Sections/SectionTwelveSubLogo.vue';
 import SectionThirteen from './components/Sections/SectionThirteen.vue';
 import SectionFourteen from './components/Sections/SectionFourteen.vue';
 import SectionFifteen from './components/Sections/SectionFifteen.vue';
@@ -78,6 +80,7 @@ export default {
     SectionTen,
     SectionEleven,
     SectionTwelve,
+    SectionTwelveSubLogo,
     SectionThirteen,
     SectionFourteen,
     SectionFifteen,

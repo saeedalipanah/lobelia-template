@@ -1,42 +1,46 @@
 <template>
-  <div class="container">
-    <div class="title">
-      <h1>CONTACT ICO CRYPTO</h1>
-      <p>Any question? Reach out to us and we’ll get back to you shortly.</p>
+  <div class="page-container">
+    <div class="page-title-container">
+      <h1 class="page-title">CONTACT ICO CRYPTO</h1>
+      <p class="page-title-text">
+        Any question? Reach out to us and we’ll get back to you shortly.
+      </p>
     </div>
     <div class="content">
       <v-container>
-        <v-row justify="center">
-          <v-col cols="12" sm="4" v-for="(item,i) in items" :key="i">
-            <div class=" red d-flex justify-center align-center">
-              <span :class="`${item.icon}`"></span>
-              <h4 class="mx-4">{{item.text}}</h4>
+        <v-row>
+          <v-col cols="12" sm="4" v-for="(item, i) in items" :key="i">
+            <div class="content-us d-flex justify-center align-center">
+              <span class="content-us-icon" :class="`${item.icon}`"></span>
+              <h4 class="mx-4 content-us-text">{{ item.text }}</h4>
             </div>
           </v-col>
         </v-row>
       </v-container>
       <v-container>
         <v-row class="">
-          <v-col cols="12" class=" red">
-              <v-text-field class="input-text"
-            label="Your Name"
-          ></v-text-field>
+          <v-col cols="12">
+            <v-text-field
+              class="input-text name mt-14"
+              label="Your Name"
+            ></v-text-field>
           </v-col>
           <v-col cols="12">
-              <v-text-field
-              class="input-text"
-            label="Your Email"
-          ></v-text-field>
+            <v-text-field
+              class="input-text email"
+              label="Your Email"
+            ></v-text-field>
           </v-col>
           <v-col cols="12">
-              <v-text-field class="input-text"
-            label="Your Message"
-          ></v-text-field>
+            <v-text-field
+              class="input-text message pt-10 pb-2"
+              label="Your Message"
+            ></v-text-field>
           </v-col>
         </v-row>
       </v-container>
       <div class="d-flex justify-center">
-      <v-btn rounded>submit</v-btn>
+        <v-btn rounded class="submit">submit</v-btn>
       </div>
     </div>
   </div>
@@ -66,29 +70,68 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.page-container {
   .content {
-   .input-text {
-     width: 60%;
-     margin: 0 auto;
-     ::v-deep .v-label{
-       left: 45% !important;
-     }
+    max-width: 800px;
+    .content-us {
+      .content-us-icon {
+        color: #0a1992;
+        font-size: 18px;
+        &.fa-telegram-plane {
+          padding: 10px 12px;
+        }
+      }
+      .content-us-text {
+        color: #f5f7fe;
+        display: inline;
+        font-size: 15.04px;
+        font-weight: 300;
+        line-height: 25.2672px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+    .input-text {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 50px;
+      ::v-deep .v-input__slot:before {
+        border-color: rgba(145, 145, 145, 0.719);
+        width: 100%;
+        ::v-deep .v-label--acitve {
+          top: -30px;
+          background: red !important;
+          color: red !important;
+        }
+      }
+      ::v-deep .v-label {
+        // left: 45% !important;
+        width: 100%;
+        max-width: unset !important;
+        transform-origin: center !important;
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 1rem;
+        font-weight: 400;
+        color: white;
+      }
+    }
+    .submit {
+      background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+      padding: 27px 65px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      color: white;
+    }
   }
 }
-}
-span{
+span {
   font-size: 30px;
   position: relative;
   background: rgb(255, 253, 253);
   padding: 10px;
   border-radius: 50%;
-  
 }
 </style>

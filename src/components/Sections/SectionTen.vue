@@ -1,40 +1,16 @@
 <template>
-  <div class="contanier blue lighten-2">
+  <div class="page-container">
     <v-container>
       <v-row>
-        <v-col class="grey">
-          <v-timeline>
-            <v-timeline-item
-              v-for="(year, i) in years"
-              :key="i"
-              :color="year.color"
-              small
-            >
-              <template v-slot:opposite>
-                <span
-                class="red"
-                  :class="`headline font-weight-bold ${year.color}--text`"
-                  v-text="year.year"
-                ></span>
-              </template>
-
-
-              <div class="title py-4 yellow">
-                <h2
-                class="white"
-                  :class="`headline font-weight-light mb-4 ${year.color}--text`"
-                >
-                  Lorem ipsum
-                </h2>
-                <div class="content blue">
-                  Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
-                  scaevola imperdiet nec ut, sed euismod convenire principes at.
-                  Est et nobis iisque percipit, an vim zril disputando
-                  voluptatibus, vix an salutandi sententiae.
-                </div>
-              </div>
-            </v-timeline-item>
-          </v-timeline>
+        <v-col class="">
+          <timeline-item
+            v-for="(item, i) in items"
+            :key="i"
+            :title="item.title"
+            :body="item.body"
+            :isRight="item.isRight"
+            :isChecked="item.isChecked"
+          ></timeline-item>
         </v-col>
       </v-row>
     </v-container>
@@ -42,45 +18,62 @@
 </template>
 
 <script>
+import TimelineItem from "@/components/UI/TimelineItem.vue";
 export default {
   data() {
-    
-        return {
-          years: [
-            {
-              color: "black",
-              year: "1960",
-            },
-            {
-              color: "green",
-              year: "1970",
-            },
-            {
-              color: "pink",
-              year: "1980",
-            },
-            {
-              color: "amber",
-              year: "1990",
-            },
-            {
-              color: "orange",
-              year: "2000",
-            },
-          ],
+    return {
+      items: [
+        {
+          title: "March 2018",
+          body: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+          isRight: true,
+          isChecked: true,
+        },
+
+        {
+          title: "May 2018",
+          body: "Start of the ICO Crypto Platform Development. It is a long established fact that a reader will be distracted.",
+          isRight: false,
+          isChecked: true,
+        },
+
+        {
+          title: "July 2018",
+          body: "Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain",
+          isRight: true,
+          isChecked: false,
+        },
+
+        {
+          title: "September 2018",
+          body: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non",
+          isRight: false,
+          isChecked: false,
+        },
+
+        {
+          title: "November 2018",
+          body: "Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain",
+          isRight: true,
+          isChecked: false,
+        },
+        {
+          title: "January 2019",
+          body: "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime",
+          isRight: false,
+          isChecked: false,
+        },
+      ],
     };
+  },
+  components: {
+    TimelineItem,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.contanier {
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.page-container {
   .content {
     .actions {
       width: 80%;

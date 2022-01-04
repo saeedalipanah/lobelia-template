@@ -1,8 +1,8 @@
 <template>
-  <div class="contanier blue lighten-2">
-    <div class="title">
-      <h1>THE CRYPTO SOLUTION</h1>
-      <p>
+  <div class="page-container">
+    <div class="page-title-container">
+      <h1 class="page-title">THE CRYPTO SOLUTION</h1>
+      <p class="page-title-text">
         The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </div>
@@ -74,13 +74,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contanier {
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.page-container {
+  
   .content {
     .items-container{
       display: flex;

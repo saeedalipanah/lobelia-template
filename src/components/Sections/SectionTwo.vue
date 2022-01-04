@@ -1,5 +1,6 @@
 <template>
-  <div class="contanier">
+  <div class="page-container">
+    222222222222
     <v-container>
       <v-row >
         <v-col class="red lighten-3" cols="12" md="6">
@@ -23,7 +24,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.container {
+.page-container {
   .video {
     width: 100%;
     height: 350px;

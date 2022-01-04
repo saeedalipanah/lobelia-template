@@ -1,14 +1,14 @@
 <template>
-  <div class="contanier blue lighten-2">
-    <div class="section-1 red lighten-4">
-      <div class="title">
-        <h1>ICO CRYPRO PARTNERS</h1>
-        <p>
+  <div class="page-container">
+      <div class="page-title-container">
+        <h1 class="page-title">ICO CRYPRO PARTNERS</h1>
+        <p class="page-title-text">
           The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua.
         </p>
       </div>
+    <div class="section-1">
       <div class="main-logos">
         <v-container>
           <v-row justify="center">
@@ -24,21 +24,6 @@
           </v-row>
         </v-container>
       </div>
-    </div>
-    <div class="sub-logos">
-      <v-container fluid>
-        <v-row justify="center">
-          <v-col
-            class=""
-            cols="6"
-            sm="2"
-            v-for="(logo, i) in subLogos"
-            :key="i"
-          >
-            <v-img :src="logo.url"></v-img>
-          </v-col>
-        </v-row>
-      </v-container>
     </div>
   </div>
 </template>
@@ -64,50 +49,14 @@ export default {
           url: "https://demo.themenio.com/ico/images/partners/d-md.png",
         },
       ],
-      subLogos: [
-        {
-          url: "https://demo.themenio.com/ico/images/partners/a-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/b-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/c-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/d-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/e-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/f-xs-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/a-sm-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/b-sm-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/c-sm-light.png",
-        },
-        {
-          url: "https://demo.themenio.com/ico/images/partners/d-sm-light.png",
-        },
-      ],
+      
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.contanier {
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.page-container{
+  
 }
 </style>
