@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
+  background-color: #000537;
   .title {
     color: #ffffff;
     font-size: 25px !important;

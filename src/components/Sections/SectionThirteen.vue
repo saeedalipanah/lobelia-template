@@ -188,6 +188,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
+  background-color: #0a1992;
   .content {
     max-width: 900px;
     width: 100%;

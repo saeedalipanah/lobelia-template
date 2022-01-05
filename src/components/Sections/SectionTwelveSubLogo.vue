@@ -59,6 +59,9 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-.sub-logos{
+.page-container{
+background-color: #000537;
+  .sub-logos{
+  }
 }
 </style>

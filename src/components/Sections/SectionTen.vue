@@ -1,5 +1,8 @@
 <template>
   <div class="page-container">
+    <div class="page-title-container">
+      <h1 class="page-title">OUR ROADMAP</h1>
+    </div>
     <v-container>
       <v-row>
         <v-col class="">
@@ -74,10 +77,9 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
+  background-color: #000537;
   .content {
     .actions {
-      width: 80%;
-      background: red;
     }
   }
 }

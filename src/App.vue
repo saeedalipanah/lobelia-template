@@ -9,7 +9,8 @@
         <Navbar class="navigation"></Navbar>
       </header>
       <v-main>
-        <section-one></section-one>
+        <section-one>
+        </section-one>
         <section-two></section-two>
         <section-three></section-three>
         <section-four></section-four>

@@ -43,7 +43,7 @@
           </v-col>
           <v-col class="blue d-flex flex-column align-center">
             <v-card>
-              <h1>timer</h1>
+              <Timer/>
               <v-btn rounded color="red">join & buy token</v-btn>
               <div class="icons d-flex justify-center">
                 <i class="fab fa-bitcoin"></i>
@@ -60,10 +60,14 @@
 </template>
 
 <script>
+import Timer from '@/components/UI/Timer.vue'
 export default {
   data() {
     return {};
   },
+  components:{
+    Timer
+  }
 };
 </script>
 

@@ -145,7 +145,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-container{
-  background: #0a1a92ee;
+  background-color: #0a1992;
 
   .cards{
     transform: translateY(80px);
