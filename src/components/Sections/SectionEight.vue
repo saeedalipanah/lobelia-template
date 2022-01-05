@@ -9,10 +9,10 @@
     <div class="content">
       <v-container>
         <v-row>
-          <v-col class="red">
-            <div class="items d-flex ">
+          <v-col class="d-flex justify-center">
+            <div class="items d-flex">
               <ul>
-                <li class="white">
+                <li class="">
                   <h3>Start</h3>
                   <p>Feb 8, 2018 (9:00AM GMT)</p>
                 </li>
@@ -41,15 +41,17 @@
               </ul>
             </div>
           </v-col>
-          <v-col class="blue d-flex flex-column align-center">
-            <v-card>
-              <Timer/>
-              <v-btn rounded color="red">join & buy token</v-btn>
-              <div class="icons d-flex justify-center">
-                <i class="fab fa-bitcoin"></i>
-                <i class="fas fa-won-sign"></i>
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-mastercard"></i>
+          <v-col class=" d-flex flex-column align-center justify-center">
+            <v-card class="card px-5 py-9">
+              <Timer />
+              <div class="d-flex flex-column align-center">
+                <v-btn class="btn mt-4" rounded>join & buy token</v-btn>
+                <div class="icons d-flex justify-center mt-4">
+                  <i class="fab fa-bitcoin"></i>
+                  <i class="fas fa-won-sign"></i>
+                  <i class="fab fa-cc-visa"></i>
+                  <i class="fab fa-cc-mastercard"></i>
+                </div>
               </div>
             </v-card>
           </v-col>
@@ -60,26 +62,70 @@
 </template>
 
 <script>
-import Timer from '@/components/UI/Timer.vue'
+import Timer from "@/components/UI/Timer.vue";
 export default {
   data() {
     return {};
   },
-  components:{
-    Timer
-  }
+  components: {
+    Timer,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .page-container {
- 
+  background-color: #0a1992;
   .content {
-    .actions{
-      width: 80%;
-      background: red;
+    .items {
+      ul {
+        li {
+          min-height: 100px;
+          margin: 20px ;
+          h3 {
+            color: #ffffff;
+            font-size: 17.6px;
+            font-weight: 600;
+            line-height: 22.88px;
+            // margin: 0px 0px 8px;
+            text-align: left;
+          }
+          p {
+            color: #d2d3ff;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 25.2px;
+            text-align: left;
+          }
+          &::marker {
+            color: #2b56f5;
+          }
+        }
+      }
     }
-    
+    .card {
+      background: #08157a;
+      .btn {
+        background-image: linear-gradient(to right, #7a0fff 0%, #2b56f5 100%);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        line-height: 24px;
+        padding: 22px 30px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .fab,
+      .fas {
+        color: #f5f7fe;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 26.88px;
+        text-align: left;
+        margin: 0 5px;
+      }
+    }
   }
 }
 </style>
