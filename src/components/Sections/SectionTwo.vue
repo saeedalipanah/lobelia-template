@@ -1,21 +1,28 @@
 <template>
   <div class="page-container">
-    222222222222
-    <v-container>
-      <v-row >
-        <v-col class="red lighten-3" cols="12" md="6">
-          <div class="video"></div>
-        </v-col>
-        <v-col class="red lighten-5" cols="12" md="6">
+    <v-row class="px-10">
+      <v-col class="px-5" cols="12" md="6">
+        <div class="video observe">
+          <i class="far fa-play-circle"></i>
+          <img
+            src="@/assets/cover/video-cover.jpg"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </v-col>
+      <v-col class="px-5 d-flex flex-column justify-center" cols="12" md="6">
+        <div class="text-content observe observe-1">
           <h1>We’ve built a platform to buy and sell shares.</h1>
           <p>
             We’re reinventing the global equity blockchian – that is secure,
             smart and easy-to-use platform, and completely disrupting the way
             businesses raise capital and the way investors buy and sell shares.
           </p>
-        </v-col>
-      </v-row>
-    </v-container>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -25,10 +32,49 @@ export default {};
 
 <style lang="scss" scoped>
 .page-container {
-  .video {
-    width: 100%;
-    height: 350px;
-    background-color: red !important;
+    .video {
+      position: relative;
+      border-radius: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.329);
+        border-radius: 5px;
+      }
+      img {
+        border-radius: 5px;
+      }
+      .far {
+        position: absolute;
+        font-size: 60px;
+        color: #3682f5;
+        font-weight: 100;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .text-content {
+      h1 {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 46.8px;
+        margin: 0px 0px 20px;
+        text-align: left;
+      }
+      p {
+        color: #d2d3ff;
+        font-size: 19.2px;
+        font-weight: 300;
+        line-height: 32.256px;
+        text-align: left;
+      }
+    }
   }
-}
 </style>

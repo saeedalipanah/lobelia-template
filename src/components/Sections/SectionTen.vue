@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title">OUR ROADMAP</h1>
+      <h1 class="page-title observe">OUR ROADMAP</h1>
     </div>
     <v-container>
       <v-row>
@@ -13,6 +13,7 @@
             :body="item.body"
             :isRight="item.isRight"
             :isChecked="item.isChecked"
+            class="observe"
           ></timeline-item>
         </v-col>
       </v-row>

@@ -69,7 +69,7 @@ export default {
         ) {
           this.isEnd = true;
         }
-      }, 100);
+      }, 1000);
     },
   },
 };

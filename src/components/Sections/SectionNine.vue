@@ -4,15 +4,15 @@
       <v-row>
         <v-col md="6" class=" d-flex flex-column align-center">
           <div class="header-container">
-            <h1>Distribution of tokens</h1>
+            <h1 class="observe">Distribution of tokens</h1>
           </div>
-          <v-img contain src="@/assets/logo/chart-1.png" class="image"></v-img>
+          <v-img contain src="@/assets/logo/chart-1.png" class="image observe"></v-img>
         </v-col>
         <v-col md="6" class=" d-flex flex-column align-center">
           <div class="header-container">
-            <h1>Use of proceeds</h1>
+            <h1 class="observe observe-1">Use of proceeds</h1>
           </div>
-          <v-img contain src="@/assets/logo/chart-2.png" class="image"></v-img>
+          <v-img contain src="@/assets/logo/chart-2.png" class="image observe observe-1"></v-img>
         </v-col>
       </v-row>
     </v-container>

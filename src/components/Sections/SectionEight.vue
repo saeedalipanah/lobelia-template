@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title">TOKEN SALE</h1>
-      <p class="page-title-text">
+      <h1 class="page-title observe">TOKEN SALE</h1>
+      <p class="page-title-text observe">
         The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </div>
@@ -12,29 +12,29 @@
           <v-col class="d-flex justify-center">
             <div class="items d-flex">
               <ul>
-                <li class="">
+                <li class="observe">
                   <h3>Start</h3>
                   <p>Feb 8, 2018 (9:00AM GMT)</p>
                 </li>
-                <li>
+                <li class="observe">
                   <h3>End</h3>
                   <p>Feb 20, 2018 (11:00AM GMT)</p>
                 </li>
-                <li>
+                <li class="observe">
                   <h3>Acceptable currencies</h3>
                   <p>ETH, BTC, LTC</p>
                 </li>
               </ul>
               <ul>
-                <li>
+                <li class="observe observe-1">
                   <h3>Number of tokens for sale</h3>
                   <p>900,000 ICC (9%)</p>
                 </li>
-                <li>
+                <li class="observe observe-1">
                   <h3>Tokens exchange rate</h3>
                   <p>1 ETH = 650 ICC, 1 BTC = 1940 ICC</p>
                 </li>
-                <li>
+                <li class="observe observe-1">
                   <h3>Minimal transaction amount</h3>
                   <p>1 ETH/ 1 BTC/ 1 LTC</p>
                 </li>
@@ -42,8 +42,8 @@
             </div>
           </v-col>
           <v-col class=" d-flex flex-column align-center justify-center">
-            <v-card class="card px-5 py-9">
-              <Timer />
+            <v-card class="card px-5 py-9 observe observe-2">
+              <Timer class="" />
               <div class="d-flex flex-column align-center">
                 <v-btn class="btn mt-4" rounded>join & buy token</v-btn>
                 <div class="icons d-flex justify-center mt-4">

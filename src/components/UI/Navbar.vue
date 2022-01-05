@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <v-app-bar app elevate-on-scroll height="90" class="app-bar" color="#0a1992">
+    <v-app-bar app elevate-on-scroll height="90" class="app-bar" color="#061162">
       <v-toolbar-title class="text-uppercase">
         <img src="@/assets/logo/logo-white2x.png" alt="" class="logo-image" />
       </v-toolbar-title>
@@ -12,24 +12,24 @@
       ></v-app-bar-nav-icon>
 
       <ul class="nav-items d-flex items-center">
-        <li class="nav-button">WHAT IS ICO</li>
-        <li class="nav-button">TOKEN SALE</li>
-        <li class="nav-button">ROADMAP</li>
-        <li class="nav-button">TEAM</li>
-        <li class="nav-button">PARTNERS</li>
+        <li class="nav-button"><a href="#sec-2">WHAT IS ICO</a></li>
+        <li class="nav-button"><a href="#sec-8">TOKEN SALE</a></li>
+        <li class="nav-button"><a href="#sec-10">ROADMAP</a></li>
+        <li class="nav-button"><a href="#sec-11">TEAM</a></li>
+        <li class="nav-button"><a href="#sec-12">PARTNERS</a></li>
         <li class="nav-button more-button">
           MORE
           <i class="fas fa-chevron-down"></i>
           <!-- menu items -->
           <div class="menu-items">
             <ul>
-              <li>Media Partners</li>
-              <li>Faqs</li>
+              <li><a href="#sec-13">Media Partners</a></li>
+              <li><a href="#sec-14">Faqs</a></li>
             </ul>
           </div>
           <!-- end of menu items -->
         </li>
-        <li class="nav-button" color="white" plain>CONTACT</li>
+        <li class="nav-button" color="white" plain><a href="#sec-15">CONTACT</a></li>
       </ul>
 
       <v-btn rounded class="end-button mx-4"> whitepaper </v-btn>
@@ -57,11 +57,11 @@
       </v-btn>
 
       <ul class="drawer-nav-items">
-        <li class="drawer-nav-button">WHAT IS ICO</li>
-        <li class="drawer-nav-button">TOKEN SALE</li>
-        <li class="drawer-nav-button">ROADMAP</li>
-        <li class="drawer-nav-button">TEAM</li>
-        <li class="drawer-nav-button">PARTNERS</li>
+        <li class="drawer-nav-button"><a href="#sec-2">WHAT IS ICO</a></li>
+        <li class="drawer-nav-button"><a href="#sec-8">TOKEN SALE</a></li>
+        <li class="drawer-nav-button"><a href="#sec-10">ROADMAP</a></li>
+        <li class="drawer-nav-button"><a href="#sec-11">TEAM</a></li>
+        <li class="drawer-nav-button"><a href="#sec-12">PARTNERS</a></li>
         <li>
           <v-list-group :value="true" no-action class="list-group">
             <template v-slot:activator>
@@ -70,17 +70,17 @@
               >
             </template>
             <li class="white--text px-3" style="font-weight: 300">
-              Media Partners
+              <a href="#sec-13">Media Partners</a>
             </li>
             <li
               class="white--text px-3"
               style="font-weight: 300; border: none; padding-bottom: 0"
             >
-              Faqs
+              <a href="#sec-14">Faqs</a>
             </li>
           </v-list-group>
         </li>
-        <li class="drawer-nav-button" color="white" plain>CONTACT</li>
+        <li class="drawer-nav-button" color="white" plain><a href="#sec-15">CONTACT</a></li>
       </ul>
       <v-btn rounded class="end-button mx-4"> whitepaper </v-btn>
       <v-btn rounded class="end-button"> try app </v-btn>
@@ -110,6 +110,9 @@ export default {
   @media only screen and(max-width:990px) {
     padding: 0 50px;
   }
+  @media only screen and(max-width:400px) {
+    padding: 0 10px;
+  }
   .app-bar-icon {
     display: none;
     @media only screen and(max-width:990px) {
@@ -132,6 +135,10 @@ export default {
       display: none !important;
     }
     .nav-button {
+      a{
+        color: white;
+        text-decoration: none;
+      }
       color: white !important;
       padding: 20px 8px !important;
       font-size: 12px;
@@ -190,6 +197,10 @@ export default {
     padding: 12px 25px;
     padding-top: 50px;
     li {
+      a{
+        color: white;
+        text-decoration: none;
+      }
       font-size: 12px;
       font-weight: 500;
       line-height: 16.8px;

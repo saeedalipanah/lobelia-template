@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title">CONTACT ICO CRYPTO</h1>
-      <p class="page-title-text">
+      <h1 class="page-title observe">CONTACT ICO CRYPTO</h1>
+      <p class="page-title-text observe">
         Any question? Reach out to us and we’ll get back to you shortly.
       </p>
     </div>
@@ -10,7 +10,7 @@
       <v-container>
         <v-row>
           <v-col cols="12" sm="4" v-for="(item, i) in items" :key="i">
-            <div class="content-us d-flex justify-center align-center">
+            <div class="content-us d-flex justify-center align-center observe" :class="`observe-${i}`">
               <span class="content-us-icon" :class="`${item.icon}`"></span>
               <h4 class="mx-4 content-us-text">{{ item.text }}</h4>
             </div>
@@ -21,26 +21,26 @@
         <v-row class="">
           <v-col cols="12">
             <v-text-field
-              class="input-text name mt-14"
+              class="input-text name mt-14 "
               label="Your Name"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
             <v-text-field
-              class="input-text email"
+              class="input-text email "
               label="Your Email"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
             <v-text-field
-              class="input-text message pt-10 pb-2"
+              class="input-text message pt-10 pb-2 "
               label="Your Message"
             ></v-text-field>
           </v-col>
         </v-row>
       </v-container>
       <div class="d-flex justify-center">
-        <v-btn rounded class="submit">submit</v-btn>
+        <v-btn rounded class="submit observe observe-3">submit</v-btn>
       </div>
     </div>
   </div>
@@ -92,18 +92,22 @@ export default {
         white-space: nowrap;
       }
     }
+    
     .input-text {
       width: 100%;
       max-width: 800px;
       margin: 0 auto;
       font-size: 50px;
+      &:hover{
+        color: transparent ;
+        border-color: transparent !important;
+      }
+
       ::v-deep .v-input__slot:before {
         border-color: rgba(145, 145, 145, 0.719);
         width: 100%;
         ::v-deep .v-label--acitve {
           top: -30px;
-          background: red !important;
-          color: red !important;
         }
       }
       ::v-deep .v-label {

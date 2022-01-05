@@ -1,6 +1,24 @@
 <template>
   <div class="page-container">
-    111111111111
+     <vue-particles
+     style="position : absolute; width:100%"
+        color="#0175fa"
+        :particleOpacity="0.4"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#0175fa"
+        :linesWidth="2"
+        :lineLinked="true"
+        :lineOpacity="0.1"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
     <v-img
       contain
       src="@/assets/logo/gfx-c.png"
@@ -31,6 +49,11 @@ export default {};
 
 <style lang="scss" scoped>
 .page-container {
+  background: url("http://wpdemo.oceanthemes.net/icos-lobelia/wp-content/themes/icos-lobelia/assets/images/header-shape-lobelia.png") no-repeat;
+  background-size: contain;
+  background-position: top;
+  // linear-gradient(to top left,#000537 0%,#0a1992 100%) !important;
+  z-index: 2000;
   .content {
     display: flex;
     flex-direction: column;

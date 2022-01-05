@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
       <div class="page-title-container">
-        <h1 class="page-title">ICO CRYPRO PARTNERS</h1>
-        <p class="page-title-text">
+        <h1 class="page-title observe">ICO CRYPRO PARTNERS</h1>
+        <p class="page-title-text observe">
           The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua.
@@ -19,7 +19,7 @@
               v-for="(logo, i) in mainLogos"
               :key="i"
             >
-              <v-img :src="logo.url"></v-img>
+              <v-img :src="logo.url" class="observe" :class="`observe-${i+1}`"></v-img>
             </v-col>
           </v-row>
         </v-container>

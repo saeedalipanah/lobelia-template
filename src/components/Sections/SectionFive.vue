@@ -1,19 +1,18 @@
 <template>
   <div class="page-container">
-    5555555555
     <div class="page-title-container">
-      <h1 class="page-title">THE MAGOR PROBLEM</h1>
-      <p class="page-title-text">
+      <h1 class="page-title observe">THE MAGOR PROBLEM</h1>
+      <p class="page-title-text observe">
         The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
         et dolore magna aliqua.
       </p>
     </div>
-    <div class="content red">
+    <div class="content observe">
       <v-container fluid>
         <v-row>
-          <v-col cols="12" md="6" class="cols blue darken-4">
-            <div class="items-container">
+          <v-col cols="12" md="6" class="cols ">
+            <div class="items-container observe">
               <div class="d-flex align-start mr-6">
                 <v-img contain src="@/assets/logo-icon/icon-k.png" width="95" height="109"></v-img>
               </div>
@@ -32,8 +31,8 @@
               </div>
             </div>
           </v-col>
-          <v-col cols="12" md="6" class="cols grey">
-            <div class="items-container">
+          <v-col cols="12" md="6" class="cols">
+            <div class="items-container observe observe-1">
               <div class="d-flex align-start mr-6">
               <v-img contain src="@/assets/logo-icon/icon-l.png" width="95" height="109"></v-img>
               </div>
@@ -54,8 +53,8 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="6" class="cols blue darken-4 ">
-            <div class="items-container">
+          <v-col cols="12" md="6" class="cols ">
+            <div class="items-container observe">
               <div class="d-flex align-start mr-6">
               <v-img contain src="@/assets/logo-icon/icon-m.png" width="95" height="109"></v-img>
               </div>
@@ -74,8 +73,8 @@
               </div>
             </div>
           </v-col>
-          <v-col cols="12" md="6" class="cols grey">
-            <div class="items-container">
+          <v-col cols="12" md="6" class="cols ">
+            <div class="items-container observe observe-1">
               <div class="d-flex align-start mr-6">
               <v-img contain src="@/assets/logo-icon/icon-n.png" width="95" height="109"></v-img>
               </div>
@@ -106,15 +105,18 @@ export default {};
 
 <style lang="scss" scoped>
 .page-container {
+  background-color: #0a1992;
   .content {
-    border-radius: 15px;
-    padding: 4%;
+    background-color: #000537;
+    border-radius: 12px;
+    padding: 5% 4%;
     // margin: 0 20px;
      @media only screen and(max-width:960px) {
        margin: 0 5%;
   }
     .items-container {
       display: flex;
+      margin: 10px 0;
        @media only screen and(max-width:500px) {
        flex-direction: column;
        align-items: start;

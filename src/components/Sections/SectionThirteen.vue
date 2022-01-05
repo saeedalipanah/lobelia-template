@@ -1,14 +1,14 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title">FREQUENTLY ASKED QUESTION</h1>
-      <p class="page-title-text">
+      <h1 class="page-title observe">FREQUENTLY ASKED QUESTION</h1>
+      <p class="page-title-text observe">
         Below we’ve provided a bit of ICO, ICO Token, cryptocurrencies, and few
         others. If you have any other questions, please get in touch using the
         contact form below.
       </p>
     </div>
-    <div class="content">
+    <div class="content observe">
       <v-container fluid>
         <v-row justify="center">
           <v-col class="">
@@ -19,7 +19,7 @@
               color=""
               grow
             >
-              <v-tab v-for="(tab, i) in tabs" :key="i" class="tab">
+              <v-tab v-for="(tab, i) in tabs" :key="i" class="tab" >
                 {{ tab.name }}
               <div class="line"></div>
               </v-tab>
@@ -212,12 +212,20 @@ export default {
         width: 100%;
         height: 2px;
         bottom: 0;
-        background: rgb(110, 110, 110);
+        background: #737ec5;
       }
     }
     .panels {
+      background-color: #091682;
       .panel {
         background: transparent !important;
+        border-bottom: 1px solid #45bbf25e !important;
+        &:last-child{
+          border:none !important;
+        }
+        &::before{
+          box-shadow: none !important;
+        }
         .header {
           color: #d2d3ff;
           font-size: 19.2px;
@@ -227,9 +235,10 @@ export default {
           ::v-deep .v-icon{
             color: white !important;
           }
-          &:active,
-          &:hover {
-            color: #46bdf4;
+          &:hover,
+          &.v-expansion-panel-header--active{
+            color: #46bdf4 !important;
+
           }
         }
         .text {

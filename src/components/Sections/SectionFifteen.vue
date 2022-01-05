@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
-    <h1 class="title">Don't miss out, Stay updated</h1>
+    <h1 class="title observe">Don't miss out, Stay updated</h1>
     <div class="content">
-      <div class="actions">
+      <div class="actions observe">
         <input
           class="input pl-6"
           type="email"
@@ -12,7 +12,7 @@
         />
         <v-btn rounded class="subscribe-button">subscribe</v-btn>
       </div>
-      <div class="icons">
+      <div class="icons observe">
         <i class="fab fa-facebook-f"></i>
         <i class="fab fa-twitter"></i>
         <i class="fab fa-youtube"></i>
@@ -21,7 +21,7 @@
         <i class="fab fa-medium-m"></i>
       </div>
     </div>
-    <p class="copy-right text-center">
+    <p class="copy-right text-center observe">
       Copyright © 2019, ICO Crypto. Template Made By Softnio & Handcrafted by
       iO. All trademarks and copyrights belong to their respective owners.
     </p>

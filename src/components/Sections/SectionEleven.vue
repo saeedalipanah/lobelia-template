@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title">HOW IT WORKS</h1>
-      <p class="page-title-text">
+      <h1 class="page-title observe">HOW IT WORKS</h1>
+      <p class="page-title-text observe">
         ICO brings together the best of both traditional business and agile
         crypto models Sed ut pers piciatis unde omnis iste natus error sit
         voluptatem accusantium.
@@ -12,7 +12,7 @@
     <v-container fluid>
       <v-row >
         <v-col class=" d-flex justify-center" cols="12" sm="6" md="3" v-for="(user,i) in users" :key="i">
-          <v-card class="cards d-flex flex-column align-center " :class="`card-${i}`" max-width="344" >
+          <v-card class="observe cards d-flex flex-column align-center " :class="`observe-${i}`" max-width="344" >
             <v-avatar size="150">
             <v-img contain
               :src="user.avatarImage"
@@ -36,12 +36,12 @@
     </v-container>
       <!-- ADVISORS -->
     <div class="page-title-container ">
-      <h1 class="page-title pb-0 mb-0">ADVISORS</h1>
+      <h1 class="page-title pb-0 mb-0 observe">ADVISORS</h1>
     </div>
     <v-container fluid>
       <v-row justify="center">
         <v-col class=" d-flex justify-center" cols="12" sm="6" md="3" v-for="(advisor,i) in advisors" :key="i">
-          <v-card class="cards d-flex flex-column align-center " max-width="344" :class="`card-${i}`">
+          <v-card class="observe cards d-flex flex-column align-center " max-width="344" :class="`observe-${i}`">
             <v-avatar size="150">
             <v-img contain
               :src="advisor.avatarImage"
@@ -49,10 +49,10 @@
             ></v-img>
 
             </v-avatar>
-            <v-card-title class="text-center"> {{advisor.name}} </v-card-title>
-            <v-card-subtitle> {{advisor.stack}} </v-card-subtitle>
+            <v-card-title class="username text-center white--text"> {{advisor.name}} </v-card-title>
+            <v-card-subtitle class="stack"> {{advisor.stack}} </v-card-subtitle>
 
-            <v-card-text class="text-center">{{advisor.description}}</v-card-text>
+            <v-card-text class="description text-center">{{advisor.description}}</v-card-text>
 
             <v-card-actions>
              <i class="fab fa-linkedin"></i>
@@ -120,25 +120,7 @@ export default {
       observer: null
     };
   },
-  mounted(){
-    this.slideInAnimation()
-  },
-  methods:{
-    slideInAnimation(){
-      const cards = document.getElementsByClassName('cards');
-      this.observer = new IntersectionObserver((enteries)=>{
-        enteries.forEach(entery => {
-          if(entery.isIntersecting){
-            entery.target.classList.add('show')
-          }
-        })
-      });
-      for (let i = 0; i < cards.length; i++) {
-        this.observer.observe(cards[i])
-      }
-    },
-
-  }
+  
   
 };
 </script>
@@ -148,8 +130,7 @@ export default {
   background-color: #0a1992;
 
   .cards{
-    transform: translateY(80px);
-    opacity: 0;
+    
     background: #08157a;
     padding: 20px 0;
     .username{
@@ -164,20 +145,6 @@ export default {
     .fab{
       color: #d2d3ff;
       margin: 0 3px;
-    }
-    &.show{
-      transition: all 1s ease;
-      transform: translateY(0);
-      opacity: 1;
-    }
-    &.card-1 {
-      transition-delay: .1s;
-    }
-    &.card-2 {
-      transition-delay: .2s;
-    }
-    &.card-3 {
-      transition-delay: .3s;
     }
     
   }
