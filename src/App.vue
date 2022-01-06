@@ -89,7 +89,7 @@ export default {
         setTimeout(() => {
           this.isLoading = false;
           resolve();
-        }, 1000);
+        }, 3000);
       });
     },
   },
@@ -178,7 +178,7 @@ export default {
   }
   .cover-bottom{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background-color: rgb(253, 255, 253);
     position: absolute;
     top: 39vh;

@@ -25,6 +25,7 @@
       class="blockchain-img"
       width="80%"
       min-width="290"
+      min-height="50"
       max-width="920"
     ></v-img>
     <div class="content">
@@ -55,8 +56,8 @@ export default {
   background-size: contain;
   background-position: top;
   background-color: #091685;
+  padding-top:20px ;
   position: relative;
-  padding: 0;
   .blockchain-img{
     margin: 20px 0;
   }
