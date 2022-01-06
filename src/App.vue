@@ -171,17 +171,17 @@ export default {
     z-index: 100;
   }
   .move-up{
-    animation: moveUp 1s ease-in forwards ;
+    animation: moveUp .6s ease-in forwards ;
   }
   .move-down{
-    animation: moveDown 1s ease-in  forwards ;
+    animation: moveDown .6s ease-in  forwards ;
   }
   .cover-bottom{
     width: 100%;
     height: 50vh;
     background-color: rgb(253, 255, 253);
     position: absolute;
-    top: 37.5vh;
+    top: 39vh;
     z-index: 100;
   }
 }
