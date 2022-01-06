@@ -43,10 +43,12 @@
         <v-btn rounded class="submit observe observe-3">submit</v-btn>
       </div>
     </div>
+    <base-line class="line"></base-line>
   </div>
 </template>
 
 <script>
+import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
   data() {
     return {
@@ -66,12 +68,29 @@ export default {
       ],
     };
   },
+  components:{
+    BaseLine
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  position: relative;
+    .page-title{
+    position: relative;
+    &::before{
+      content: 'contact';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     max-width: 800px;
     .content-us {
@@ -130,6 +149,9 @@ export default {
       line-height: 24px;
       color: white;
     }
+  }
+  .line{
+    bottom: -150px;
   }
 }
 span {

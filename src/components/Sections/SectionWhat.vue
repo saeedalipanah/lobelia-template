@@ -62,6 +62,19 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
+  background-color: #091685;
+  .page-title{
+    position: relative;
+    &::before{
+      content: 'WHAT';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     .image{
       max-width: 500px;

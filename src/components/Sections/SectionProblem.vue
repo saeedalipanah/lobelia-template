@@ -106,6 +106,20 @@ export default {};
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  padding-bottom: 0;
+   .page-title{
+    position: relative;
+    &::before{
+      content: 'problem';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     background-color: #000537;
     border-radius: 12px;

@@ -71,6 +71,19 @@ export default {};
 <style lang="scss" scoped>
 .page-container {
   background-color: #000537;
+  .page-title{
+    position: relative;
+    &::before{
+      content: 'process';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     .text-container {
       .content-text {

@@ -16,20 +16,26 @@
         </v-col>
       </v-row>
     </v-container>
+    <base-line class="line"></base-line>
   </div>
 </template>
 
 <script>
+import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
   data() {
     return {};
   },
+  components:{
+    BaseLine
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  position: relative;
   .header-container{
     display: flex;
     justify-content: center;
@@ -55,5 +61,8 @@ export default {
       max-width: 690px;
       min-width: 280px;
     }
+   .line{
+     bottom: -150px;
+   }
 }
 </style>

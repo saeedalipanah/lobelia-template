@@ -1,9 +1,10 @@
 <template>
   <div class="page-container">
+    
     <v-row class="px-10">
-      <v-col class="px-5" cols="12" md="6">
+      <v-col class="px-5 d-flex align-center justify-center" cols="12" md="6">
         <div class="video observe">
-          <i class="far fa-play-circle"></i>
+          <play-icon class="far"></play-icon>
           <img
             src="@/assets/cover/video-cover.jpg"
             alt=""
@@ -27,11 +28,18 @@
 </template>
 
 <script>
-export default {};
+import PlayIcon from '@/components/UI/PlayIcon.vue'
+export default {
+  components:{
+    PlayIcon
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .page-container {
+  padding-bottom: 0 ;
+  background-color: #091685;
     .video {
       position: relative;
       border-radius: 5px;

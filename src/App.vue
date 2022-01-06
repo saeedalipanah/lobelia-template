@@ -1,5 +1,6 @@
 <template>
   <v-app class="app">
+       
     <div v-if="isLoading" class="loading">
       <loading-spinner></loading-spinner>
     </div>
@@ -11,20 +12,22 @@
       <v-main>
         <section-one id="sec-1"> </section-one>
         <section-two id="sec-2"></section-two>
-        <section-three id="sec-3"></section-three>
-        <section-four id="sec-4"></section-four>
-        <section-five id="sec-5"></section-five>
-        <section-six id="sec-6"></section-six>
-        <section-seven id="sec-7"></section-seven>
-        <section-eight id="sec-8"></section-eight>
+        <section-what id="sec-3"></section-what>
+        <section-process id="sec-4"></section-process>
+        <section-problem id="sec-5"></section-problem>
+        <section-solution id="sec-6"></section-solution>
+        <section-apps id="sec-7"></section-apps>
+        <section-token id="sec-8"></section-token>
         <section-nine id="sec-9"></section-nine>
-        <section-ten id="sec-10"></section-ten>
-        <section-eleven id="sec-11"></section-eleven>
-        <section-twelve id="sec-12"></section-twelve>
+        <section-roadmap id="sec-10"></section-roadmap>
+        <section-team id="sec-11"></section-team>
+        <section-partners id="sec-12"></section-partners>
         <section-twelve-sub-logo id="sec-13"></section-twelve-sub-logo>
-        <section-thirteen id="sec-14"></section-thirteen>
-        <section-fourteen id="sec-15"></section-fourteen>
+        <section-faqs id="sec-14"></section-faqs>
+        <section-contact id="sec-15"></section-contact>
         <section-fifteen id="sec-16"></section-fifteen>
+        <div  class="cover-top" id="cover-top"></div>
+        <div  class="cover-bottom" id="cover-bottom"></div>
       </v-main>
 
       <footer></footer>
@@ -37,29 +40,34 @@ import Navbar from "@/components/UI/Navbar.vue";
 import LoadingSpinner from "@/components/UI/LoadingSpinner.vue";
 import SectionOne from "@/components/Sections/SectionOne.vue";
 import SectionTwo from "@/components/Sections/SectionTwo.vue";
-import SectionThree from "@/components/Sections/SectionThree.vue";
-import SectionFour from "@/components/Sections/SectionFour.vue";
-import SectionFive from "@/components/Sections/SectionFive.vue";
-import SectionSix from "@/components/Sections/SectionSix.vue";
-import SectionSeven from "@/components/Sections/SectionSeven.vue";
-import SectionEight from "@/components/Sections/SectionEight.vue";
+import SectionWhat from "@/components/Sections/SectionWhat.vue";
+import SectionProcess from "@/components/Sections/SectionProcess.vue";
+import SectionProblem from "@/components/Sections/SectionProblem.vue";
+import SectionSolution from "@/components/Sections/SectionSolution.vue";
+import SectionApps from "@/components/Sections/SectionApps.vue";
+import SectionToken from "@/components/Sections/SectionToken.vue";
 import SectionNine from "@/components/Sections/SectionNine.vue";
-import SectionTen from "@/components/Sections/SectionTen.vue";
-import SectionEleven from "@/components/Sections/SectionEleven.vue";
-import SectionTwelve from "@/components/Sections/SectionTwelve.vue";
+import SectionRoadmap from "@/components/Sections/SectionRoadmap.vue";
+import SectionTeam from "@/components/Sections/SectionTeam.vue";
+import SectionPartners from "@/components/Sections/SectionPartners.vue";
 import SectionTwelveSubLogo from "./components/Sections/SectionTwelveSubLogo.vue";
-import SectionThirteen from "./components/Sections/SectionThirteen.vue";
-import SectionFourteen from "./components/Sections/SectionFourteen.vue";
+import SectionFaqs from "./components/Sections/SectionFaqs.vue";
+import SectionContact from "./components/Sections/SectionContact.vue";
 import SectionFifteen from "./components/Sections/SectionFifteen.vue";
 export default {
   name: "App",
 
   data: () => ({
     isLoading: true,
+    // coverIsShow:true,
   }),
   mounted() {
     this.load().then(() => {
       this.slideInAnimation();
+      const coverTop = document.getElementById('cover-top');
+      const coverBottom = document.getElementById('cover-bottom');
+      coverTop.classList.add('move-up');
+      coverBottom.classList.add('move-down');
     });
   },
   methods: {
@@ -73,7 +81,6 @@ export default {
         });
       });
       for (let i = 0; i < cards.length; i++) {
-        console.log(cards[i]);
         this.observer.observe(cards[i]);
       }
     },
@@ -91,19 +98,19 @@ export default {
     LoadingSpinner,
     SectionOne,
     SectionTwo,
-    SectionThree,
-    SectionFour,
-    SectionFive,
-    SectionSix,
-    SectionSeven,
-    SectionEight,
+    SectionWhat,
+    SectionProcess,
+    SectionProblem,
+    SectionSolution,
+    SectionApps,
+    SectionToken,
     SectionNine,
-    SectionTen,
-    SectionEleven,
-    SectionTwelve,
+    SectionRoadmap,
+    SectionTeam,
+    SectionPartners,
     SectionTwelveSubLogo,
-    SectionThirteen,
-    SectionFourteen,
+    SectionFaqs,
+    SectionContact,
     SectionFifteen,
   },
 };
@@ -115,11 +122,8 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 .app {
-  background-image: linear-gradient(
-    135deg,
-    #0a1992 0%,
-    #000537 100%
-  ) !important;
+ overflow: hidden;
+ position: relative;
   .loading {
     height: 100vh;
     width: 100%;
@@ -157,6 +161,50 @@ export default {
     &.observe-7 {
       transition-delay: .8s;
     }
+  }
+  .cover-top{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: -90px;
+    z-index: 100;
+  }
+  .move-up{
+    animation: moveUp 1s ease-in forwards ;
+  }
+  .move-down{
+    animation: moveDown 1s ease-in  forwards ;
+  }
+  .cover-bottom{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(253, 255, 253);
+    position: absolute;
+    top: 37.5vh;
+    z-index: 100;
+  }
+}
+@keyframes moveUp {
+  0%{
+    transform: translate(0,0);
+  }
+  99%{
+    transform: translate(0,-600px);
+  }
+  100%{
+    transform: translate(10000px,0);
+  }
+}
+@keyframes moveDown {
+  0%{
+    transform: translate(0,0);
+  }
+  99%{
+    transform: translate(0,600px);
+  }
+  100%{
+    transform: translate(10000px,0);
   }
 }
 </style>

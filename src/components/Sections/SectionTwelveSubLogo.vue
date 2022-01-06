@@ -1,5 +1,6 @@
 <template>
   <div class="sub-logos page-container">
+    <base-line class="line"></base-line>
     <h3 class="observe">as seen in</h3>
     <v-container fluid>
       <v-row justify="center">
@@ -12,7 +13,11 @@
 </template>
 
 <script>
+import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
+  components:{
+    BaseLine
+  },
   data() {
     return {
       subLogos: [
@@ -54,6 +59,10 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
+  position: relative;
+  .line{
+    top : 0;
+  }
   h3 {
     color: #ffffff;
     font-size: 14.08px;

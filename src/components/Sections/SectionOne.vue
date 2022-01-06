@@ -1,21 +1,21 @@
 <template>
   <div class="page-container">
      <vue-particles
-     style="position : absolute; width:100%"
+     style="position : absolute; width:100%;"
         color="#0175fa"
         :particleOpacity="0.4"
-        :particlesNumber="80"
+        :particlesNumber="40"
         shapeType="circle"
-        :particleSize="4"
+        :particleSize="7"
         linesColor="#0175fa"
         :linesWidth="2"
         :lineLinked="true"
         :lineOpacity="0.1"
         :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
+        :moveSpeed="5"
+        :hoverEffect="false"
         hoverMode="grab"
-        :clickEffect="true"
+        :clickEffect="false"
         clickMode="push"
       >
       </vue-particles>
@@ -44,7 +44,9 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+};
 </script>
 
 <style lang="scss" scoped>
@@ -52,8 +54,12 @@ export default {};
   background: url("http://wpdemo.oceanthemes.net/icos-lobelia/wp-content/themes/icos-lobelia/assets/images/header-shape-lobelia.png") no-repeat;
   background-size: contain;
   background-position: top;
-  // linear-gradient(to top left,#000537 0%,#0a1992 100%) !important;
-  z-index: 2000;
+  background-color: #091685;
+  position: relative;
+  padding: 0;
+  .blockchain-img{
+    margin: 20px 0;
+  }
   .content {
     display: flex;
     flex-direction: column;
@@ -105,10 +111,17 @@ export default {};
         }
       }
       .button-signup {
-        background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+        background: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+        &:hover{
+          background: linear-gradient(to right,#46bdf4  0%, #2b56f5 100%);
+
+        }
       }
       .button-token-distribution {
-        background-image: linear-gradient(to right, #7a0fff 0%, #2b56f5 100%);
+        background: linear-gradient(to right, #7a0fff 0%, #2b56f5 100%);
+        &:hover{
+          background: linear-gradient(to right,#2b56f5  0%, #7a0fff  100%);
+        }
       }
     }
   }

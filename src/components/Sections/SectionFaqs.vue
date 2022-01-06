@@ -19,12 +19,12 @@
               color=""
               grow
             >
-              <v-tab v-for="(tab, i) in tabs" :key="i" class="tab" >
+              <v-tab v-for="(tab, i) in tabs" :key="i" class="tab">
                 {{ tab.name }}
-              <div class="line"></div>
+                <div class="line"></div>
               </v-tab>
             </v-tabs>
-            <v-tabs-items v-model="tab" >
+            <v-tabs-items v-model="tab">
               <v-tab-item v-for="(tab, i) in tabs" :key="i">
                 <v-expansion-panels accordion class="panels my-5">
                   <v-expansion-panel
@@ -189,6 +189,19 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  .page-title {
+    position: relative;
+    &::before {
+      content: "faqs";
+      position: absolute;
+      opacity: 0.04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     max-width: 900px;
     width: 100%;
@@ -202,12 +215,17 @@ export default {
         display: none !important;
       }
       .tab {
-        color: #f5f7fe !important;
-        font-family: "Poppins";
+        color: #3479f5 !important;
         line-height: 19px;
+        font-size: 17px;
+        letter-spacing: 0px;
         text-align: center;
+        &:hover {
+          color: #46bdf4 !important;
+          background-color: transparent;
+        }
       }
-      .line{
+      .line {
         position: absolute;
         width: 100%;
         height: 2px;
@@ -220,25 +238,25 @@ export default {
       .panel {
         background: transparent !important;
         border-bottom: 1px solid #45bbf25e !important;
-        &:last-child{
-          border:none !important;
+        &:last-child {
+          border: none !important;
         }
-        &::before{
+        &::before {
           box-shadow: none !important;
         }
         .header {
           color: #d2d3ff;
           font-size: 19.2px;
           line-height: 24.96px;
-          padding: 16px 54px 8px 30px;
+          padding: 16px 54px 16px 30px;
           text-align: left;
-          ::v-deep .v-icon{
+          ::v-deep .v-icon {
             color: white !important;
           }
+          transition: all 0.3s ease;
           &:hover,
-          &.v-expansion-panel-header--active{
+          &.v-expansion-panel-header--active {
             color: #46bdf4 !important;
-
           }
         }
         .text {

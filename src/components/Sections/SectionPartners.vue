@@ -58,5 +58,18 @@ export default {
 <style lang="scss" scoped>
 .page-container{
   background-color: #0a1992;
+    .page-title{
+    position: relative;
+    &::before{
+      content: 'partners';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
 }
 </style>

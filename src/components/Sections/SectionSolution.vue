@@ -20,7 +20,7 @@
             :key="i"
           >
             <div
-              class="content d-flex flex-column align-center justify-center observe " 
+              class="content d-flex flex-column align-center justify-center observe"
               :class="`observe-${i}`"
             >
               <v-img
@@ -109,6 +109,19 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  .page-title {
+    position: relative;
+    &::before {
+      content: "solution";
+      position: absolute;
+      opacity: 0.04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900 ;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     h3 {
       color: #ffffff;

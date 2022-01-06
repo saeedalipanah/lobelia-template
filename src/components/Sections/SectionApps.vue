@@ -11,18 +11,14 @@
     <div class="content">
       <v-container>
         <v-row>
-          <v-col cols="12" sm="6" class=" d-flex justify-center align-end">
+          <v-col cols="12" sm="6" class="d-flex justify-center align-end">
             <v-img
               class="image observe"
               contain
               src="@/assets/logo/large-dark.png"
             ></v-img>
           </v-col>
-          <v-col
-            cols="12"
-            sm="6"
-            class=" d-flex flex-column justify-center"
-          >
+          <v-col cols="12" sm="6" class="d-flex flex-column justify-center">
             <div class="text">
               <p class="observe">
                 Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do
@@ -64,6 +60,19 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   background-color: #000537;
+  .page-title {
+    position: relative;
+    &::before {
+      content: "apps";
+      position: absolute;
+      opacity: 0.04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     .image {
       width: 100%;

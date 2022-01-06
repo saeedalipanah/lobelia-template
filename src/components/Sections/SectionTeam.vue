@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title observe">HOW IT WORKS</h1>
+      <h1 class="page-title page-title-team observe">HOW IT WORKS</h1>
       <p class="page-title-text observe">
         ICO brings together the best of both traditional business and agile
         crypto models Sed ut pers piciatis unde omnis iste natus error sit
@@ -128,7 +128,20 @@ export default {
 <style lang="scss" scoped>
 .page-container{
   background-color: #0a1992;
-
+  padding-bottom: 0;
+    .page-title-team{
+    position: relative;
+    &::before{
+      content: 'team';
+      position: absolute;
+      opacity: .04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .cards{
     
     background: #08157a;

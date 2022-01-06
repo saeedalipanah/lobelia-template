@@ -38,7 +38,8 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
-  background-color: #000537;
+  // background-color: #000537;
+  background: url(//wpdemo.oceanthemes.net/icos-lobelia/wp-content/themes/icos-lobelia/assets/images/footer-bg.png) no-repeat 50% 0%/contain,#10122d;
   .title {
     color: #ffffff;
     font-size: 25px !important;
@@ -110,5 +111,6 @@ export default {
     text-align: center;
     max-width: 550px;
   }
+  
 }
 </style>

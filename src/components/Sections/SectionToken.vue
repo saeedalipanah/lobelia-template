@@ -3,7 +3,9 @@
     <div class="page-title-container">
       <h1 class="page-title observe">TOKEN SALE</h1>
       <p class="page-title-text observe">
-        The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua.
       </p>
     </div>
     <div class="content">
@@ -41,7 +43,7 @@
               </ul>
             </div>
           </v-col>
-          <v-col class=" d-flex flex-column align-center justify-center">
+          <v-col class="d-flex flex-column align-center justify-center">
             <v-card class="card px-5 py-9 observe observe-2">
               <Timer class="" />
               <div class="d-flex flex-column align-center">
@@ -76,12 +78,26 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   background-color: #0a1992;
+  padding-bottom: 0;
+  .page-title {
+    position: relative;
+    &::before {
+      content: "token";
+      position: absolute;
+      opacity: 0.04;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 900;
+      left: -50%;
+      right: -50%;
+    }
+  }
   .content {
     .items {
       ul {
         li {
           min-height: 100px;
-          margin: 20px ;
+          margin: 20px;
           h3 {
             color: #ffffff;
             font-size: 17.6px;
