@@ -25,7 +25,6 @@
       class="blockchain-img"
       width="80%"
       min-width="290"
-      min-height="50"
       max-width="920"
     ></v-img>
     <div class="content">
@@ -47,6 +46,12 @@
 <script>
 
 export default {
+  mounted(){
+    const blockchainImage = document.querySelector('.blockchain-img');
+    const content = document.querySelector('.content')
+    blockchainImage.classList.add('slide-up');
+    content.classList.add('slide-up')
+  }
 };
 </script>
 
@@ -60,7 +65,24 @@ export default {
   position: relative;
   .blockchain-img{
     margin: 20px 0;
+    min-height: 390px;
+    @media only screen and(max-width:1000px){
+      min-height: 300px;
+    }
+    @media only screen and(max-width:740px){
+      min-height: 250px;
+    }
+    @media only screen and(max-width:540px){
+      min-height: 200px;
+    }
+    @media only screen and(max-width:390px){
+      min-height: 160px;
+    }
   }
+  .slide-up{
+    animation: moveDown 1s ease ;
+    }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -125,6 +147,16 @@ export default {
         }
       }
     }
+  }
+}
+@keyframes moveDown {
+  0%{
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
