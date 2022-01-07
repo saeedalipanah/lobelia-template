@@ -111,13 +111,7 @@ export default {};
     position: relative;
     &::before{
       content: 'problem';
-      position: absolute;
-      opacity: .04;
-      font-size: 130px;
-      text-transform: uppercase;
-      font-weight: 900;
-      left: -50%;
-      right: -50%;
+      transform: translate(-19%,-15%);
     }
   }
   .content {

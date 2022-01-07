@@ -67,12 +67,6 @@ export default {
     position: relative;
     &::before{
       content: 'WHAT';
-      position: absolute;
-      opacity: .04;
-      font-size: 130px;
-      font-weight: 900;
-      left: -50%;
-      right: -50%;
     }
   }
   .content {

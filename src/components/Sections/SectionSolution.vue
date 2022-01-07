@@ -113,13 +113,7 @@ export default {
     position: relative;
     &::before {
       content: "solution";
-      position: absolute;
-      opacity: 0.04;
-      font-size: 130px;
-      text-transform: uppercase;
-      font-weight: 900 ;
-      left: -50%;
-      right: -50%;
+     
     }
   }
   .content {

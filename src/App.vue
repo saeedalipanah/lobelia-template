@@ -66,8 +66,17 @@ export default {
       this.slideInAnimation();
       const coverTop = document.getElementById('cover-top');
       const coverBottom = document.getElementById('cover-bottom');
+      const body = document.querySelector('body');
+      console.log(body);
       coverTop.classList.add('move-up');
       coverBottom.classList.add('move-down');
+        body.style.height = "100vh"
+        body.style.overflow = 'hidden'
+      setTimeout(() => {
+        body.style.height = "auto"
+        body.style.overflow = 'auto'
+        
+      }, 900);
     });
   },
   methods: {
@@ -117,10 +126,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
-* {
-  font-family: "Poppins", sans-serif;
-}
+
 .app {
  overflow: hidden;
  position: relative;

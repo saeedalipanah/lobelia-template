@@ -73,28 +73,54 @@ export default {
   components: {
     TimelineItem,
   },
+  mounted() {
+    this.timelineResize();
+    window.addEventListener("resize", () => {
+      this.timelineResize();
+    });
+  },
+  methods: {
+    timelineResize() {
+      const timeLine = document.querySelectorAll(".timeline-item");
+      if (window.innerWidth <= 500) {
+        this.items.forEach((element) => {
+          element.isRight = true;
+        });
+        timeLine.forEach((element) => {
+         element.classList.add('timeline-start')
+        });
+        
+      } 
+      else {
+        this.items.forEach((element, i) => {
+          if (i % 2 === 0) {
+            element.isRight = true;
+          } else {
+            element.isRight = false;
+          }
+            timeLine.forEach((element) => {
+             element.classList.remove('timeline-start')
+            });
+          
+          
+        });
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .page-container {
   background-color: #000537;
-    .page-title{
+  .page-title {
     position: relative;
-    &::before{
-      content: 'roadmap';
-      position: absolute;
-      opacity: .04;
-      font-size: 130px;
-      text-transform: uppercase;
-      font-weight: 900;
-      left: -68%;
-      right: -50%;
+    &::before {
+      content: "roadmap";
+      transform: translate(-28%, -15%);
     }
   }
   .content {
-    .actions {
-    }
   }
 }
 </style>

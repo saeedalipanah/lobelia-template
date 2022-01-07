@@ -83,13 +83,7 @@ export default {
     position: relative;
     &::before {
       content: "token";
-      position: absolute;
-      opacity: 0.04;
-      font-size: 130px;
-      text-transform: uppercase;
-      font-weight: 900;
-      left: -50%;
-      right: -50%;
+      transform: translate(-27%,-15%);
     }
   }
   .content {

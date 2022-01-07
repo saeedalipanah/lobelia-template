@@ -61,7 +61,13 @@ export default {
 .page-container {
   position: relative;
   .line{
-    top : 0;
+    top : -120px;
+    @media only screen and(max-width: 960px) {
+      top: -90px;
+    }
+    @media only screen and(max-width: 768px) {
+      top: -60px;
+    }
   }
   h3 {
     color: #ffffff;

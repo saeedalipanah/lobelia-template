@@ -10,7 +10,10 @@
       <v-container>
         <v-row>
           <v-col cols="12" sm="4" v-for="(item, i) in items" :key="i">
-            <div class="content-us d-flex justify-center align-center observe" :class="`observe-${i}`">
+            <div
+              class="content-us d-flex justify-center align-center observe"
+              :class="`observe-${i}`"
+            >
               <span class="content-us-icon" :class="`${item.icon}`"></span>
               <h4 class="mx-4 content-us-text">{{ item.text }}</h4>
             </div>
@@ -21,19 +24,19 @@
         <v-row class="">
           <v-col cols="12">
             <v-text-field
-              class="input-text name mt-14 "
+              class="input-text name mt-14"
               label="Your Name"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
             <v-text-field
-              class="input-text email "
+              class="input-text email"
               label="Your Email"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
             <v-text-field
-              class="input-text message pt-10 pb-2 "
+              class="input-text message pt-10 pb-2"
               label="Your Message"
             ></v-text-field>
           </v-col>
@@ -68,9 +71,9 @@ export default {
       ],
     };
   },
-  components:{
-    BaseLine
-  }
+  components: {
+    BaseLine,
+  },
 };
 </script>
 
@@ -78,17 +81,10 @@ export default {
 .page-container {
   background-color: #0a1992;
   position: relative;
-    .page-title{
+  .page-title {
     position: relative;
-    &::before{
-      content: 'contact';
-      position: absolute;
-      opacity: .04;
-      font-size: 130px;
-      text-transform: uppercase;
-      font-weight: 900;
-      left: -50%;
-      right: -50%;
+    &::before {
+      content: "contact";
     }
   }
   .content {
@@ -111,14 +107,14 @@ export default {
         white-space: nowrap;
       }
     }
-    
+
     .input-text {
       width: 100%;
       max-width: 800px;
       margin: 0 auto;
       font-size: 50px;
-      &:hover{
-        color: transparent ;
+      &:hover {
+        color: transparent;
         border-color: transparent !important;
       }
 
@@ -135,10 +131,13 @@ export default {
         max-width: unset !important;
         transform-origin: center !important;
         text-align: center;
-        font-family: "Poppins";
         font-size: 1rem;
         font-weight: 400;
-        color: white;
+        color: rgb(255, 255, 255);
+      }
+      ::v-deep .primary--text {
+        color: rgb(255, 255, 255) !important;
+        border-color: white;
       }
     }
     .submit {
@@ -150,8 +149,14 @@ export default {
       color: white;
     }
   }
-  .line{
-    bottom: -150px;
+  .line {
+    bottom: -120px;
+    @media only screen and(max-width: 960px) {
+      bottom: -90px;
+    }
+    @media only screen and(max-width: 768px) {
+      bottom: -60px;
+    }
   }
 }
 span {

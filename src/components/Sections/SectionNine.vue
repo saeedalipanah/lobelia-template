@@ -43,7 +43,6 @@ export default {
       width: 25%;
       min-width: 200px;
       color: #ffffff;
-      font-family: "Poppins";
       font-size: 28px;
       font-weight: 600;
       line-height: 36.4px;
