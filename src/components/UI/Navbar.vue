@@ -4,8 +4,8 @@
       app
       fixed
       elevate-on-scroll
-      height="80"
       class="app-bar"
+      :height="height"
     >
       <v-toolbar-title class="text-uppercase">
         <img
@@ -110,6 +110,7 @@ export default {
   data() {
     return {
       drawer: false,
+      height : 100,
     };
   },
   mounted() {
@@ -117,14 +118,41 @@ export default {
     navItems.forEach((element) => {
       element.classList.add("slide-down");
     });
+    this.navbarAnimation();
   },
+  methods:{
+    
+    navbarAnimation(){
+       const observeObject = document.querySelector(".observe-object");
+       const navbar = document.querySelector(".app-bar");
+      let navObserver = new IntersectionObserver((enteries) => {
+        enteries.forEach((entery) => {
+          if (entery.isIntersecting) {
+            //if object is exsist in view port and threshold is 0
+            navbar.classList.remove('watched');
+            this.height = 100;
+          } else {
+            navbar.classList.add('watched')
+            this.height = 70;
+          }
+        });
+      },{threshold : 0});
+        navObserver.observe(observeObject);
+      
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .app-bar {
-  background: #061162 !important;
   padding: 0 200px;
+  // transition: all 1s ease !important;
+  background: transparent !important;
+  &.watched{
+    // transition: all 1s ease !important;
+    background: #061162 !important;
+  }
   @media only screen and(max-width:1390px) {
     padding: 0 30px;
   }

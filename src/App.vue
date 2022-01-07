@@ -8,7 +8,7 @@
         <Navbar class="navigation"></Navbar>
       </header>
       <v-main>
-        <section-one id="sec-1"> </section-one>
+        <section-one id="sec-1"></section-one>
         <section-two id="sec-2"></section-two>
         <section-what id="sec-3"></section-what>
         <section-process id="sec-4"></section-process>
@@ -58,7 +58,6 @@ export default {
 
   data: () => ({
     isLoading: true,
-    // coverIsShow:true,
   }),
   mounted() {
     this.load().then(() => {
@@ -80,15 +79,16 @@ export default {
   methods: {
     observeAnimation() {
       const cards = document.getElementsByClassName("observe");
-      this.observer = new IntersectionObserver((enteries) => {
+      let observer = new IntersectionObserver((enteries) => {
         enteries.forEach((entery) => {
           if (entery.isIntersecting) {
+            //if object is exsist in view port and threshold is 0
             entery.target.classList.add("show");
           }
         });
       });
       for (let i = 0; i < cards.length; i++) {
-        this.observer.observe(cards[i]);
+        observer.observe(cards[i]);
       }
     },
     load() {

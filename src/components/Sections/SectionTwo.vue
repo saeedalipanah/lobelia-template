@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   padding-bottom: 0 ;
-  background-color: #091685;
+  background-color: #0a1992;
     .video {
       position: relative;
       border-radius: 5px;

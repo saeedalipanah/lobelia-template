@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-container {
-  background-color: #091685;
+  background-color: #0a1992;
   .page-title{
     position: relative;
     &::before{
