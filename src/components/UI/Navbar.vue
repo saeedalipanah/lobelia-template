@@ -219,7 +219,7 @@ export default {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #06116f;
+        background: #00085b;
         border-radius: 4px;
         width: 230px;
         opacity: 0;
