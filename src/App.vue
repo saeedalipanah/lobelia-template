@@ -1,11 +1,9 @@
 <template>
-  <v-app class="app">
-       
     <div v-if="isLoading" class="loading">
       <loading-spinner></loading-spinner>
     </div>
+  <v-app class="app" v-else>
 
-    <div v-else>
       <header>
         <Navbar class="navigation"></Navbar>
       </header>
@@ -26,12 +24,13 @@
         <section-faqs id="sec-14"></section-faqs>
         <section-contact id="sec-15"></section-contact>
         <section-fifteen id="sec-16"></section-fifteen>
-        <div  class="cover-top" id="cover-top"></div>
-        <div  class="cover-bottom" id="cover-bottom"></div>
+        <div class="cover-top" id="cover-top"></div>
+        <div class="cover-bottom" id="cover-bottom"></div>
       </v-main>
 
-      <footer></footer>
-    </div>
+      <footer>
+
+      </footer>
   </v-app>
 </template>
 
@@ -63,24 +62,23 @@ export default {
   }),
   mounted() {
     this.load().then(() => {
-      this.slideInAnimation();
-      const coverTop = document.getElementById('cover-top');
-      const coverBottom = document.getElementById('cover-bottom');
-      const body = document.querySelector('body');
-      console.log(body);
-      coverTop.classList.add('move-up');
-      coverBottom.classList.add('move-down');
-        body.style.height = "100vh"
-        body.style.overflow = 'hidden'
-      setTimeout(() => {
-        body.style.height = "auto"
-        body.style.overflow = 'auto'
-        
-      }, 900);
+      this.observeAnimation();
+      //animation for covers
+      const coverTop = document.getElementById("cover-top");
+      const coverBottom = document.getElementById("cover-bottom");
+      const body = document.querySelector("body");
+      coverTop.classList.add("move-up");
+      coverBottom.classList.add("move-down");
+      body.style.height = "100vh";
+      body.style.overflow = "hidden";
+        setTimeout(() => {
+          body.style.height = "auto";
+          body.style.overflow = "auto";
+        }, 900);
     });
   },
   methods: {
-    slideInAnimation() {
+    observeAnimation() {
       const cards = document.getElementsByClassName("observe");
       this.observer = new IntersectionObserver((enteries) => {
         enteries.forEach((entery) => {
@@ -101,6 +99,7 @@ export default {
         }, 3000);
       });
     },
+   
   },
   components: {
     Navbar,
@@ -126,10 +125,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.app {
- overflow: hidden;
- position: relative;
   .loading {
     height: 100vh;
     width: 100%;
@@ -137,6 +132,12 @@ export default {
     justify-content: center;
     align-items: center;
   }
+.app {
+  .v-main{
+    padding: 0 !important;
+  }
+  overflow: hidden;
+  position: relative;
   .observe {
     transform: translateY(80px);
     opacity: 0;
@@ -145,30 +146,30 @@ export default {
       transform: translateY(0);
       opacity: 1;
     }
-    
+
     &.observe-1 {
-      transition-delay: .2s;
+      transition-delay: 0.2s;
     }
     &.observe-2 {
-      transition-delay: .4s;
+      transition-delay: 0.4s;
     }
     &.observe-3 {
-      transition-delay: .6s;
+      transition-delay: 0.6s;
     }
     &.observe-4 {
-      transition-delay: .2s;
+      transition-delay: 0.2s;
     }
     &.observe-5 {
-      transition-delay: .4s;
+      transition-delay: 0.4s;
     }
     &.observe-6 {
-      transition-delay: .6s;
+      transition-delay: 0.6s;
     }
     &.observe-7 {
-      transition-delay: .8s;
+      transition-delay: 0.8s;
     }
   }
-  .cover-top{
+  .cover-top {
     width: 100%;
     height: 50vh;
     background-color: rgb(255, 255, 255);
@@ -176,13 +177,13 @@ export default {
     top: -90px;
     z-index: 100;
   }
-  .move-up{
-    animation: moveUp .6s ease-in forwards ;
+  .move-up {
+    animation: moveUp 0.6s ease-in forwards;
   }
-  .move-down{
-    animation: moveDown .6s ease-in  forwards ;
+  .move-down {
+    animation: moveDown 0.6s ease-in forwards;
   }
-  .cover-bottom{
+  .cover-bottom {
     width: 100%;
     height: 60vh;
     background-color: rgb(253, 255, 253);
@@ -192,25 +193,26 @@ export default {
   }
 }
 @keyframes moveUp {
-  0%{
-    transform: translate(0,0);
+  0% {
+    transform: translate(0, 0);
   }
-  99%{
-    transform: translate(0,-600px);
+  99% {
+    transform: translate(0, -600px);
   }
-  100%{
-    transform: translate(10000px,0);
+  100% {
+    transform: translate(10000px, 0);
   }
 }
 @keyframes moveDown {
-  0%{
-    transform: translate(0,0);
+  0% {
+    transform: translate(0, 0);
   }
-  99%{
-    transform: translate(0,600px);
+  99% {
+    transform: translate(0, 600px);
   }
-  100%{
-    transform: translate(10000px,0);
+  100% {
+    transform: translate(10000px, 0);
   }
 }
+
 </style>

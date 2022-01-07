@@ -34,8 +34,8 @@
         Cryptocurrency Trust problems.
       </p>
       <div class="buttons">
-        <v-btn rounded class="button button-signup">sign up to join</v-btn>
-        <v-btn rounded class="button button-token-distribution"
+        <v-btn rounded class="button button-signup observe observe-7">sign up to join</v-btn>
+        <v-btn rounded class="button button-token-distribution observe observe-7"
           >token distribution</v-btn
         >
       </div>
@@ -61,21 +61,12 @@ export default {
   background-size: contain;
   background-position: top;
   background-color: #091685;
-  padding-top:20px ;
+  padding-top:90px ;
   position: relative;
   .blockchain-img{
     margin: 20px 0;
     min-height: 390px;
-    @media only screen and(max-width:1000px){
-      min-height: 300px;
-    }
-    @media only screen and(max-width:740px){
-      min-height: 250px;
-    }
-    @media only screen and(max-width:540px){
-      min-height: 200px;
-    }
-    @media only screen and(max-width:390px){
+    @media only screen and(max-width:800px){
       min-height: 160px;
     }
   }

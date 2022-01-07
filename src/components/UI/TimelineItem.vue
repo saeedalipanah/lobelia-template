@@ -8,7 +8,7 @@
         </p>
       </div>
     </div>
-    <div class="line">
+    <div class="center-line">
       <i
         class="circle-icon d-flex justify-center align-center"
         :class="`${isChecked ? 'checked' : ''}`"
@@ -97,7 +97,7 @@ export default {
       }
     }
   }
-  .line {
+  .center-line {
     height: 100%;
     width: 2px;
     background: #46bdf4;

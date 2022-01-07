@@ -6,13 +6,13 @@
           <div class="header-container">
             <h1 class="observe">Distribution of tokens</h1>
           </div>
-          <v-img contain src="@/assets/logo/chart-1.png" class="image observe"></v-img>
+          <v-img contain src="@/assets/logo/chart-1.png" class="image observe" min-height="210"></v-img>
         </v-col>
         <v-col md="6" class=" d-flex flex-column align-center">
           <div class="header-container">
             <h1 class="observe observe-1">Use of proceeds</h1>
           </div>
-          <v-img contain src="@/assets/logo/chart-2.png" class="image observe observe-1"></v-img>
+          <v-img contain src="@/assets/logo/chart-2.png" class="image observe observe-1" min-height="210"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -60,8 +60,6 @@ export default {
       max-width: 690px;
       min-width: 280px;
     }
-   .line{
-     bottom: -150px;
-   }
+ 
 }
 </style>

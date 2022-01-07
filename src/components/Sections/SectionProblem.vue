@@ -111,7 +111,6 @@ export default {};
     position: relative;
     &::before{
       content: 'problem';
-      transform: translate(-19%,-15%);
     }
   }
   .content {

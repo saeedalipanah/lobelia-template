@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <div class="page-title-container">
-      <h1 class="page-title observe">THE ICO APP</h1>
+      <h1 class="page-title observe d-flex">THE ICO APP</h1>
       <p class="page-title-text observe">
         Once you’ve entered into our ecosystem, you can mange every thing.
         Anyone with a smartphone and an internet connection can partici pate in

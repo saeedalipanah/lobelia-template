@@ -113,7 +113,6 @@ export default {
     position: relative;
     &::before {
       content: "solution";
-     
     }
   }
   .content {

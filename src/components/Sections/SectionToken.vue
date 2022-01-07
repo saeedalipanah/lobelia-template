@@ -83,7 +83,6 @@ export default {
     position: relative;
     &::before {
       content: "token";
-      transform: translate(-27%,-15%);
     }
   }
   .content {

@@ -193,7 +193,6 @@ export default {
     position: relative;
     &::before {
       content: "faqs";
-      transform: translate(25%,-15%);
     }
   }
   .content {

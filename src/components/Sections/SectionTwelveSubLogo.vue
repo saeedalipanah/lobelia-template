@@ -1,11 +1,10 @@
 <template>
   <div class="sub-logos page-container">
-    <base-line class="line"></base-line>
     <h3 class="observe">as seen in</h3>
     <v-container fluid>
       <v-row justify="center">
         <v-col class="" cols="6" sm="2" v-for="(logo, i) in subLogos" :key="i">
-          <v-img :src="logo.url" class="observe" :class="`delay-${i}`"></v-img>
+          <v-img :src="logo.url" class="observe" :class="`delay-${i}`" min-height="44"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -13,11 +12,7 @@
 </template>
 
 <script>
-import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
-  components:{
-    BaseLine
-  },
   data() {
     return {
       subLogos: [
@@ -60,15 +55,7 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   position: relative;
-  .line{
-    top : -120px;
-    @media only screen and(max-width: 960px) {
-      top: -90px;
-    }
-    @media only screen and(max-width: 768px) {
-      top: -60px;
-    }
-  }
+  
   h3 {
     color: #ffffff;
     font-size: 14.08px;

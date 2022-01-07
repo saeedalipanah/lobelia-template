@@ -117,10 +117,7 @@ export default {
     position: relative;
     &::before {
       content: "roadmap";
-      transform: translate(-28%, -15%);
     }
-  }
-  .content {
   }
 }
 </style>

@@ -11,6 +11,7 @@ export default {};
 <style lang="scss" scoped>
 .parent {
   position: relative;
+    z-index: 1;
   font-size: 15px; 
   @media only screen and(max-width: 960px) {
     font-size: 10px;

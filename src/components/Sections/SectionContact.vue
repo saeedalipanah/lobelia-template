@@ -149,15 +149,7 @@ export default {
       color: white;
     }
   }
-  .line {
-    bottom: -120px;
-    @media only screen and(max-width: 960px) {
-      bottom: -90px;
-    }
-    @media only screen and(max-width: 768px) {
-      bottom: -60px;
-    }
-  }
+
 }
 span {
   font-size: 30px;

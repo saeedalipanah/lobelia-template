@@ -133,16 +133,12 @@ export default {
     position: relative;
     &::before{
       content: 'team';
-      transform: translate(-18%,-15%);
     }
   }
   .cards{
     
     background: #08157a;
     padding: 20px 0;
-    .username{
-
-    }
     .stack{
       color: #46bdf4 ;
     }

@@ -75,7 +75,6 @@ export default {};
     position: relative;
     &::before{
       content: 'process';
-      transform: translate(-30%,-15%);
     }
   }
   .content {

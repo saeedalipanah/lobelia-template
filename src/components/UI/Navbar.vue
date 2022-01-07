@@ -2,13 +2,17 @@
   <div class="navbar">
     <v-app-bar
       app
+      fixed
       elevate-on-scroll
       height="80"
       class="app-bar"
-      color="#061162"
     >
       <v-toolbar-title class="text-uppercase">
-        <img src="@/assets/logo/logo-white2x.png" alt="" class="logo-image" />
+        <img
+          src="@/assets/logo/logo-white2x.png"
+          alt=""
+          class="logo-image animate"
+        />
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -18,12 +22,12 @@
       ></v-app-bar-nav-icon>
 
       <ul class="nav-items d-flex items-center">
-        <li class="nav-button"><a href="#sec-2">WHAT IS ICO</a></li>
-        <li class="nav-button"><a href="#sec-8">TOKEN SALE</a></li>
-        <li class="nav-button"><a href="#sec-10">ROADMAP</a></li>
-        <li class="nav-button"><a href="#sec-11">TEAM</a></li>
-        <li class="nav-button"><a href="#sec-12">PARTNERS</a></li>
-        <li class="nav-button more-button">
+        <li class="nav-button animate"><a href="#sec-2">WHAT IS ICO</a></li>
+        <li class="nav-button animate"><a href="#sec-8">TOKEN SALE</a></li>
+        <li class="nav-button animate"><a href="#sec-10">ROADMAP</a></li>
+        <li class="nav-button animate"><a href="#sec-11">TEAM</a></li>
+        <li class="nav-button animate"><a href="#sec-12">PARTNERS</a></li>
+        <li class="nav-button animate more-button">
           MORE
           <i class="fas fa-chevron-down"></i>
           <!-- menu items -->
@@ -35,13 +39,13 @@
           </div>
           <!-- end of menu items -->
         </li>
-        <li class="nav-button" color="white" plain>
+        <li class="nav-button animate" color="white" plain>
           <a href="#sec-15">CONTACT</a>
         </li>
       </ul>
 
-      <v-btn rounded class="end-button mx-4"> whitepaper </v-btn>
-      <v-btn rounded class="end-button"> try app </v-btn>
+      <v-btn rounded class="end-button mx-4 animate"> whitepaper </v-btn>
+      <v-btn rounded class="end-button animate"> try app </v-btn>
     </v-app-bar>
 
     <!-- navigation-drawer -->
@@ -108,12 +112,18 @@ export default {
       drawer: false,
     };
   },
-  
+  mounted() {
+    const navItems = document.querySelectorAll(".animate");
+    navItems.forEach((element) => {
+      element.classList.add("slide-down");
+    });
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .app-bar {
+  background: #061162 !important;
   padding: 0 200px;
   @media only screen and(max-width:1390px) {
     padding: 0 30px;
@@ -149,6 +159,7 @@ export default {
       display: none !important;
     }
     .nav-button {
+      transform: translateY(-80px);
       a {
         color: white;
         text-decoration: none;
@@ -186,7 +197,6 @@ export default {
         opacity: 0;
         height: 90px;
         overflow: hidden;
-        transform: translateY(-20px);
         ul {
           list-style: none;
           li {
@@ -196,12 +206,43 @@ export default {
       }
     }
   }
+  .slide-down {
+    animation: moveDown 1s ease forwards;
+    &:nth-child(2) {
+      animation-delay: 0.05s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.15s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.25s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(8) {
+      animation-delay: 0.35s;
+    }
+    &:nth-child(9) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(10) {
+      animation-delay: 0.45s;
+    }
+  }
   .end-button {
     background-color: #0a1992 !important;
     border: 3px solid #3479f5 !important;
     font-size: 12px;
     padding: 16px 20px !important;
     color: white;
+    transform: translateY(-80px);
     @media only screen and(max-width:1000px) {
       display: none !important;
     }
@@ -263,7 +304,15 @@ export default {
       }
     }
   }
-  
 }
-
+@keyframes moveDown {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 </style>

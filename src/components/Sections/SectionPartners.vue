@@ -19,17 +19,22 @@
               v-for="(logo, i) in mainLogos"
               :key="i"
             >
-              <v-img :src="logo.url" class="observe" :class="`observe-${i+1}`"></v-img>
+              <v-img :src="logo.url" class="partners-img observe" :class="`observe-${i+1}`"></v-img>
             </v-col>
           </v-row>
         </v-container>
       </div>
     </div>
+      <base-line class="line"></base-line>
   </div>
 </template>
 
 <script>
+import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
+components:{
+  BaseLine
+},
   data() {
     return {
       mainLogos: [
@@ -62,6 +67,12 @@ export default {
     position: relative;
     &::before{
       content: 'partners';
+    }
+  }
+  .partners-image{
+    min-height: 110px;
+    @media only screen and(max-width: 800px){
+      min-height: 46px;
     }
   }
 }

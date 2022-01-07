@@ -40,6 +40,8 @@ html{
       text-transform: uppercase;
       padding: 30px 0;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
       @media only screen and(max-width:768px) {
       font-size: 2.0125rem;
       }
@@ -49,7 +51,7 @@ html{
         opacity: .04;
         font-size: 130px;
         font-weight: 900;
-        transform: translate(-22%,-15%);
+        // transform: translate(-22%,-15%);
       }
     }
     .page-title-text{
@@ -58,5 +60,15 @@ html{
         line-height: 25.2px;
         text-align: center;
         color:#aeafff;
+    }
+  }
+
+  .line{
+    bottom : -130px;
+    @media only screen and(max-width: 960px) {
+      bottom: -92px;
+    }
+    @media only screen and(max-width: 768px) {
+      bottom: -67px;
     }
   }
