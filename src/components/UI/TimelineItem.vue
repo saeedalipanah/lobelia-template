@@ -64,8 +64,6 @@ export default {
       &.text-left {
         align-items: end;
         right: 0;
-        // background: red;
-        // width: 0%;
       }
 
       &.text-right {
@@ -80,10 +78,7 @@ export default {
         line-height: 23.52px;
         text-transform: capitalize;
         margin-bottom: 16px;
-        @media only screen and(max-width :500px) {
-          font-size: 12px;
-          line-height: 16px;
-        }
+        
       }
       .text {
         color: #d2d3ff;

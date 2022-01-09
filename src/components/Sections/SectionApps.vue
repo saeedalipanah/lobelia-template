@@ -11,12 +11,14 @@
     <div class="content">
       <v-container>
         <v-row>
-          <v-col cols="12" sm="6" class="d-flex justify-center align-end">
-            <v-img
-              class="image observe"
-              contain
-              src="@/assets/logo/large-dark.png"
-            ></v-img>
+          <v-col cols="12" sm="6" class="d-flex justify-center align-center ">
+            <div class="image-container">
+              <img
+                class="image observe "
+                contain
+                src="@/assets/logo/large-dark.png"
+              >
+            </div>
           </v-col>
           <v-col cols="12" sm="6" class="d-flex flex-column justify-center">
             <div class="text">
@@ -67,13 +69,13 @@ export default {
     }
   }
   .content {
-    .image {
+    .image-container {
       width: 100%;
-      max-width: 400px !important;
-      min-height: 500px;
-      @media only screen and(max-width : 420px) {
-        width: 70%;
-        height: 70%;
+      display: flex;
+      justify-content: center;
+      .image {
+        width: 100%;
+        max-width: 400px;
       }
     }
     .text {
@@ -114,6 +116,10 @@ export default {
         padding: 20px 30px;
         text-align: center;
         text-transform: uppercase;
+        @media only screen and(max-width: 400px) {
+          font-size: 11px;
+          padding: 20px 15px;
+        }
       }
     }
   }

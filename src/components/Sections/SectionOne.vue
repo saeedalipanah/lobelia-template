@@ -162,7 +162,7 @@ export default {
 }
 @keyframes moveDown {
   0% {
-    transform: translateY(200px);
+    transform: translateY(80px);
     opacity: 0;
   }
   100% {

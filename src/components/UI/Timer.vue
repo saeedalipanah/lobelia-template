@@ -1,5 +1,5 @@
 <template>
-  <div class="timer ">
+  <div class="timer">
     <div class="timer-body" v-if="!isEnd">
       <div class="">
         <span class="time" v-if="time.day < 10">0</span>
@@ -84,16 +84,20 @@ export default {
   }
   .timer-body {
     display: flex;
+    justify-content: center;
     .time {
       color: #ffffff;
       font-size: 46.4px;
       font-weight: 300;
       line-height: 50px;
       text-align: center;
+      @media only screen and (max-width: 450px) {
+        font-size: 32.4px;
+      }
       &.points {
-        margin:0 16px;
+        margin: 0 16px;
         @media only screen and (max-width: 450px) {
-          margin:0 5px
+          margin: 0 5px;
         }
       }
     }
@@ -106,6 +110,10 @@ export default {
       line-height: 20.16px;
       text-transform: capitalize;
       padding-left: 12px;
+      @media only screen and (max-width: 450px) {
+        padding-left: 10px;
+        font-size: 10px;
+      }
     }
   }
 }

@@ -2,9 +2,9 @@
   <div class="page-container">
     <h1 class="title observe">Don't miss out, Stay updated</h1>
     <div class="content">
-      <div class="actions observe">
+      <div class="actions observe ">
         <input
-          class="input pl-6"
+          class="input pl-2 pl-sm-6"
           type="email"
           name=""
           id=""
@@ -53,17 +53,20 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
+      @media only screen and(max-width : 1024px) {
+        width: 95%;
+      }
     .actions {
       background: #08157a;
-      min-width: 580px;
+      width: 60%;
+      max-width: 550px;
       padding: 4px;
       border-radius: 30px;
       display: flex;
       justify-content: space-between;
-      width: 500px;
       margin: 30px 0;
-      @media only screen and(max-width : 760px) {
+      @media only screen and(max-width : 1024px) {
         width: 100%;
       }
       .input {
@@ -71,12 +74,14 @@ export default {
         width: 50%;
         font-size: 16px;
         font-weight: 500;
+          width: 48%;
+          min-width: 155px;
         &::placeholder {
           color: rgba(255, 255, 255, 0.623);
         }
-        @media only screen and(max-width : 760px) {
-          width: 28%;
-          min-width: 152px;
+        @media only screen and(max-width : 400px) {
+          font-size: 14px;
+          min-width: 123px;
         }
       }
       .subscribe-button {
@@ -85,6 +90,10 @@ export default {
         background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
         @media only screen and(max-width : 760px) {
           padding: 23px 7% !important;
+        }
+        @media only screen and(max-width : 400px) {
+          padding: 2px 5% !important;
+          font-size: 11px;
         }
       }
     }
