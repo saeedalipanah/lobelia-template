@@ -1,0 +1,10 @@
+//this file is just for working currectly the vetur extention 
+{
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "tests/**/*.js",
+    "tests/**/*.jsx"
+, "src/main.js"  ],
+}
