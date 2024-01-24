@@ -5,6 +5,7 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import './assets/style/global.scss'
 import VueParticles from 'vue-particles'
+import './registerServiceWorker'
 Vue.use(VueParticles)
 
 Vue.config.productionTip = false
