@@ -96,7 +96,7 @@ export default {
         setTimeout(() => {
           this.isLoading = false;
           resolve();
-        }, 3000);
+        },1500);
       });
     },
    

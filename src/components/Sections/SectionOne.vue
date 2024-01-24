@@ -34,6 +34,8 @@
         Global decentralize network to buy & sell shares. Solving the
         Cryptocurrency Trust problems.
       </p>
+      <p>{{ student }}</p>
+      <button @click="changeName">change obj</button>
       <div class="buttons">
         <v-btn rounded class="button button-signup observe observe-7"
           >sign up to join</v-btn
@@ -50,6 +52,33 @@
 
 <script>
 export default {
+  data() {
+    return {
+      student: {
+        fullName: {
+          firstname: "saeed",
+          lastname: "alipanah",
+        },
+      },
+    };
+  },
+  watch: {
+    // student(val){
+    //   console.log({val});
+    // },
+    student: {
+      handler(val) {
+        console.log(val);
+      },
+      flush:'post'
+    },
+  },
+  methods: {
+    changeName() {
+      this.student = 'sana';
+    },
+    
+  },
   mounted() {
     const blockchainImage = document.querySelector(".blockchain-img");
     const content = document.querySelector(".content");
